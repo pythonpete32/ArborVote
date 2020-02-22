@@ -1,7 +1,8 @@
 {
-  "name": "drizzle-vue-box",
+  "name": "ArborVote",
   "version": "0.0.1",
-  "description": "",
+  "description": "Rational decision-making by quadratic voting on argument trees.",
+  "repository": "https://github.com/Michael-A-Heuer/ArborVote",
   "main": "truffle-config.js",
   "directories": {
     "test": "test"
@@ -11,11 +12,11 @@
   },
   "keywords": [],
   "author": {
-    "name": "Amal Sudama",
-    "email": "amal@trufflesuite.com",
-    "url": "http://github.com/truffle-box/drizzle-vue-box"
+    "name": "Michael A. Heuer",
+    "email": "michael.heuer@rwth-aachen.de",
+    "url": "https://github.com/Michael-A-Heuer"
   },
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "openzeppelin-solidity": "^2.1.1"
   }
