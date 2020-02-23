@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'ComplexStorage',
@@ -47,31 +47,31 @@ export default {
     get_uintarray() {
       return this.getContractData({
         contract: 'ComplexStorage',
-        method: 'get_uintarray'
-      })
+        method: 'get_uintarray',
+      });
     },
     singleDD() {
       return this.getContractData({
         contract: 'ComplexStorage',
-        method: 'singleDD'
-      })
-    }
+        method: 'singleDD',
+      });
+    },
   },
   data() {
     return {
       sample: {
         get_uintarray: {
           html:
-            '<drizzle-contract contractName="ComplexStorage" method="get_uintarray" />'
+            '<drizzle-contract contractName="ComplexStorage" method="get_uintarray" />',
         },
         singleDD: {
           html:
-            '<drizzle-contract contractName="ComplexStorage" method="singleDD" />'
-        }
-      }
-    }
-  }
-}
+            '<drizzle-contract contractName="ComplexStorage" method="singleDD" />',
+        },
+      },
+    };
+  },
+};
 </script>
 
 <style scoped>

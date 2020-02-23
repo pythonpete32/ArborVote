@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'TutorialToken',
@@ -37,14 +37,14 @@ export default {
     ...mapGetters('drizzle', ['isDrizzleInitialized']),
 
     accounts() {
-      return [this.activeAccount]
+      return [this.activeAccount];
     },
 
     placeholders() {
-      return ['To Address', 'Amount to Send']
-    }
-  }
-}
+      return ['To Address', 'Amount to Send'];
+    },
+  },
+};
 </script>
 
 <style></style>

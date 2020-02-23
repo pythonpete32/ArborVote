@@ -27,21 +27,21 @@
 </template>
 
 <script>
-import TutorialToken from './TutorialToken'
-import SimpleStorage from './SimpleStorage'
-import ComplexStorage from './ComplexStorage'
-import { mapGetters } from 'vuex'
+import { mapGetters } from 'vuex';
+import TutorialToken from './TutorialToken.vue';
+import SimpleStorage from './SimpleStorage.vue';
+import ComplexStorage from './ComplexStorage.vue';
 
 export default {
   name: 'app',
   components: {
     ComplexStorage,
     TutorialToken,
-    SimpleStorage
+    SimpleStorage,
   },
 
-  computed: mapGetters('drizzle', ['isDrizzleInitialized'])
-}
+  computed: mapGetters('drizzle', ['isDrizzleInitialized']),
+};
 </script>
 
 <style>

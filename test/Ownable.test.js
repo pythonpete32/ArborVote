@@ -1,0 +1,22 @@
+const Ownable = artifacts.require('Ownable');
+
+contract('Ownable', (accounts) => {
+  let ownable;
+
+  beforeEach(async () => {
+    ownable = await Ownable.new();
+  });
+
+  it('should have an owner', async () => {
+    const owner = await ownable.owner();
+    assert.isTrue(owner !== 0);
+  });
+
+  it('changes owner after transfer', async () => {
+    const other = accounts[1];
+    await ownable.transferOwnership(other);
+    const owner = await ownable.owner();
+
+    assert.isTrue(owner === other);
+  });
+});

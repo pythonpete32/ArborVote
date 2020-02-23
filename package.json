@@ -8,9 +8,24 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ganache": "ganache-cli -p 7545 -i 5777 -m 'candy maple cake sugar pudding cream honey rich smooth crumble sweet treat' > /dev/null &",
+    "stop": "sudo kill `sudo lsof -t -i:7545`",
+    "test": "npm run ganache sleep 5 && npm run lint ./ && npm run solium && truffle test && npm run stop",
+    "coverage": "truffle run coverage",
+    "fix": "eslint ./ --fix",
+    "lint": "eslint ./",
+    "solium": "solium -d contracts/",
+    "solium:fix": "solium -d contracts/ --fix",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "vue:lint": "vue-cli-service lint"
   },
-  "keywords": [],
+  "keywords": [
+    "truffle",
+    "solidity",
+    "ethereum",
+    "voting"
+  ],
   "author": {
     "name": "Michael A. Heuer",
     "email": "michael.heuer@rwth-aachen.de",
@@ -18,6 +33,31 @@
   },
   "license": "MIT",
   "dependencies": {
-    "openzeppelin-solidity": "^2.1.1"
+    "@drizzle/store": "^1.5.1",
+    "@drizzle/vue-plugin": "^0.1.1",
+    "openzeppelin-solidity": "^2.5.0",
+    "vue": "^2.6.11",
+    "vuex": "^3.1.2",
+    "vue-template-compiler": "^2.6.11",
+    "@vue/cli-service": "^4.2.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.2.2",
+    "@vue/cli-plugin-eslint": "^4.2.2",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.0.3",
+    "chai": "4.2.0",
+    "chai-as-promised": "7.1.1",
+    "chai-bignumber": "3.0.0",
+    "coveralls": "3.0.9",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-vue": "^6.2.1",
+    "ganache-cli": "^6.9.1",
+    "prettier": "^1.19.1",
+    "solidity-coverage": "^0.7.2",
+    "solium": "1.2.5"
   }
 }
