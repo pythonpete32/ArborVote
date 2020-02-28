@@ -18,5 +18,6 @@ script:
   - truffle migrate
   - truffle test
   - npm run stop
+  - npm run test:frontend
 after_script:
   - npm run coverage && cat coverage/lcov.info | coveralls
