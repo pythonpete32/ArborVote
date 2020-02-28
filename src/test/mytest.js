@@ -1,9 +1,11 @@
 const assert = require('assert');
 const { expect } = require('chai');
 
-describe('Basic Chai Test', () => {
-  it('should return number of charachters in a string', () => {
-    expect(true);
+describe('Basic Chai Test of an array', () => {
+  const exampleArray = new Array(3);
+
+  it('should give the right arry lengt', () => {
+    expect(exampleArray).to.have.lengthOf(3);
   });
 });
 
