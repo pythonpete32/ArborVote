@@ -1,0 +1,24 @@
+{
+  "name": "arbor-app",
+  "version": "0.0.1",
+  "description": "placeholder-app-description",
+  "scripts": {
+    "postinstall": "npm run build-app",
+    "build-app": "cd app && npm install && cd ..",
+    "compile": "buidler compile --force",
+    "start": "buidler start",
+    "test": "buidler test --network buidlerevm"
+  },
+  "dependencies": {
+    "@aragon/abis": "^1.1.0"
+  },
+  "devDependencies": {
+    "@aragon/buidler-aragon": "^0.1.0",
+    "@aragon/contract-test-helpers": "0.0.1",
+    "@nomiclabs/buidler": "^1.0.2",
+    "@nomiclabs/buidler-truffle5": "^1.1.2",
+    "@nomiclabs/buidler-web3": "^1.1.2",
+    "bignumber.js": "^9.0.0",
+    "web3": "^1.2.6"
+  }
+}
